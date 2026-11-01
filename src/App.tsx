@@ -1,7 +1,7 @@
 import { useTranslations } from "use-intl";
 import { FuelPlanTool } from "./ui/FuelPlanTool";
 
-const TYPETWO_URL = "https://typetwo.com";
+const TYPETWO_URL = "https://typetwo.eu";
 
 export function App() {
   const t = useTranslations("FuelPlan");

@@ -1,6 +1,6 @@
 # Carbs per hour calculator
 
-A free, open-source endurance fuelling calculator by [typetwo](https://typetwo.com). Tell it about your race or training session and about yourself, and it builds a plan with:
+A free, open-source endurance fuelling calculator by [typetwo](https://typetwo.eu). Tell it about your race or training session and about yourself, and it builds a plan with:
 
 - **carbs per hour** and when to take each portion
 - **fluids and sodium** per hour
