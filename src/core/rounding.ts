@@ -1,4 +1,4 @@
-// Rounding helpers (plan §5). Always "half up" on positives; the epsilon absorbs floating-point noise.
+// Rounding helpers. Always "half up" on positives; the epsilon absorbs floating-point noise.
 const EPS = 1e-9;
 
 export const round5 = (x: number): number => Math.floor(x / 5 + 0.5 + EPS) * 5;

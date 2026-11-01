@@ -20,7 +20,7 @@ interface Schedule {
   rateGPerH: number;
 }
 
-/** §5.5: best (cadence, intakes-per-flask) pair: highest rate, then longest flask, then cadence 20. */
+/** Best (cadence, intakes-per-flask) pair: highest rate, then longest flask, then cadence 20. */
 export function pickSchedule(targetGPerH: number, sport: Sport): Schedule | null {
   const cadences = sport === "swimming" ? SWIMMING_CADENCES_MIN : DEFAULT_CADENCES_MIN;
   let best: { rate: number; span: number; is20: boolean; s: Schedule } | null = null;
@@ -113,7 +113,7 @@ function buildSegment(args: {
   };
 }
 
-/** §5.3: single segment, or swim/bike/run for a triathlon. */
+/** Single segment, or swim/bike/run for a triathlon. */
 export function buildSegments(
   input: FuelPlanInput,
   targetGPerH: number,
@@ -151,7 +151,7 @@ export function fuelHours(input: FuelPlanInput): number {
   return input.durationMin / 60;
 }
 
-/** Swimmers and triathletes take 20 g of typetwo shortly before the start (§5.3). */
+/** Swimmers and triathletes take 20 g of typetwo shortly before the start. */
 export function preStartFor(input: FuelPlanInput): { carbsG: 20; minutesBefore: "10–15" } | undefined {
   if (input.sport !== "triathlon" && input.sport !== "swimming") return undefined;
   if (input.trainingType === "brick") return undefined; // no swim

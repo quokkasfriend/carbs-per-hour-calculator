@@ -64,7 +64,7 @@ The calculator is a deterministic rule engine, not a model: the same answers alw
    - **Before and after.** For races over 90 minutes, carb loading of 10 g/kg a day, otherwise a 24 h fuel-up of 7 g/kg. A pre-race meal of 1 to 4 g/kg for the 1 to 4 hours before, with 6 and 4 mL/kg of fluid 4 and 2 hours before. Recovery is 1 to 1.2 g/kg of carbs per hour and 0.3 g/kg of protein.
 4. **Warn.** Based on the answers, the plan lists the relevant warnings (for example heat, altitude, estimated sweat rate, hyponatremia risk, NSAIDs, RED-S signs, a stomach floor applied, late caffeine, too many flasks). Each one is classed as a block, a warning or an info note.
 
-All the numbers are in `src/core/constants.ts`. Some are rules of thumb built on the published research and are marked `[euristica]` there.
+All the numbers are in `src/core/constants.ts`. Some are rules of thumb built on the published research and are marked `[heuristic]` there.
 
 ### What the calculator takes into account
 

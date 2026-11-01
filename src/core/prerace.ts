@@ -12,7 +12,7 @@ import { round50 } from "./rounding";
 import type { FuelPlanInput, PreRace } from "./types";
 
 /**
- * §5.9. Gram values are exact products of the weight (not rounded): the UI formats them.
+ * Gram values are exact products of the weight (not rounded): the UI formats them.
  */
 export function computePreRace(input: FuelPlanInput): PreRace {
   const w = input.weightKg;
@@ -31,7 +31,7 @@ export function computePreRace(input: FuelPlanInput): PreRace {
   };
 }
 
-/** §5.10 */
+/** Recovery carbs and protein, by body weight. */
 export function computeRecovery(input: FuelPlanInput): { carbsGPerH: [number, number]; proteinG: number } {
   const w = input.weightKg;
   return {

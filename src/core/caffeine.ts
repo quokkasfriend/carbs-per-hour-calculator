@@ -34,7 +34,7 @@ function nearest(times: number[], target: number): number {
   return best;
 }
 
-/** §5.8 */
+/** Caffeine plan: total dose by sensitivity and weight, split into doses over the race. */
 export function computeCaffeine(
   input: FuelPlanInput,
   intakeTimes: number[],

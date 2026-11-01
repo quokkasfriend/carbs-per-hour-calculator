@@ -27,7 +27,7 @@ export function sweatSodiumMgPerL(input: FuelPlanInput): number {
   return input.sweatSodiumMgPerL ?? (input.saltySweater === "yes" ? SODIUM_SALTY_MG_L : SODIUM_DEFAULT_MG_L);
 }
 
-/** §5.6 (fluids) and §5.7 (sodium). `fuelHours` is the time fluids are spread over. */
+/** Fluids and sodium per hour. `fuelHours` is the time fluids are spread over. */
 export function computeHydration(input: FuelPlanInput, bucket: Bucket, fuelHours: number): Hydration {
   const { weightKg, durationMin } = input;
 
@@ -55,7 +55,7 @@ export function computeHydration(input: FuelPlanInput, bucket: Bucket, fuelHours
     (weightKg < EAH_LIGHT_WEIGHT_KG || input.sex === "female" || input.nsaids);
   const cap = !estimated ? FLUID_CAP_MEASURED_L_H : eahRisk ? FLUID_CAP_EAH_L_H : FLUID_CAP_DEFAULT_L_H;
   // Hard constraint: fluids never exceed the sweat rate, so the 50 mL rounding must not round up past it.
-  // (Deliberate deviation from reference.py, which can exceed SR by up to 25 mL/h in ~0.3% of inputs.)
+  // (Deliberate deviation from the reference implementation, which can exceed SR by up to 25 mL/h in ~0.3% of inputs.)
   const ml = Math.min(round50(Math.min(fluids, cap) * 1000), floor50(sr * 1000));
   const planned = !(ml < FLUID_MIN_ML_H || durationMin < FLUID_MIN_DURATION_MIN);
   const fluidsMlH = planned ? ml : 0;

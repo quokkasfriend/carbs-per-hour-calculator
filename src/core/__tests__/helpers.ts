@@ -1,7 +1,7 @@
 import { buildFuelPlan, parseFuelPlanInput } from "../index";
 import type { FuelPlan, FuelPlanInput, WarningCode } from "../types";
 
-/** Defaults of plan §10: no tolerance, not gut-trained, no GI history, 50% humidity, no health flags. */
+/** Defaults of the reference cases: no tolerance, not gut-trained, no GI history, 50% humidity, no health flags. */
 const BASE = {
   sport: "road_running",
   durationMin: 120,

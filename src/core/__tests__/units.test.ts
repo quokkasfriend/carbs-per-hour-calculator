@@ -128,7 +128,7 @@ describe("schedule", () => {
 });
 
 describe("hydration and sodium", () => {
-  it("rounding never pushes fluids above SR (reference.py would give 350 here)", () => {
+  it("rounding never pushes fluids above SR (the reference implementation would give 350 here)", () => {
     const p = planOf({ sport: "cycling", durationMin: 2803, rpe: 7, weightKg: 42.33545975271954, sex: "female", tempC: 5.389182444142222 });
     expect(p.hydration.sweatRateLPerH).toBeCloseTo(0.339, 3);
     expect(p.hydration.fluidsMlH).toBe(300);
@@ -219,7 +219,7 @@ describe("warnings", () => {
     expect(warningCodes(planOf({ sport: "cycling", durationMin: 240, rpe: 8 }))).not.toContain("MANY_FLASKS"); // 6
     expect(warningCodes(planOf({ sport: "cycling", durationMin: 300, rpe: 6 }))).toContain("MANY_FLASKS");
   });
-  it("severity follows §7", () => {
+  it("severity follows the warning table", () => {
     const p = planOf({ nsaids: true });
     const sev = Object.fromEntries(p.warnings.map((w) => [w.code, w.severity]));
     expect(sev.NSAIDS).toBe("warning");
@@ -341,7 +341,7 @@ describe("invariants on 1000 random inputs", () => {
       const plan = buildFuelPlan(parsed.input);
       if (plan.blocked) throw new Error("unexpectedly blocked");
 
-      // Hard constraint: never above the sweat rate (deviates from reference.py in rounding-up cases).
+      // Hard constraint: never above the sweat rate (deviates from the reference implementation in rounding-up cases).
       expect(plan.hydration.fluidsMlH / 1000).toBeLessThanOrEqual(plan.hydration.sweatRateLPerH);
       expect(plan.hydration.fluidsMlH).toBeLessThanOrEqual(1000);
       for (const s of plan.segments) {

@@ -1,7 +1,7 @@
-// Single home for every number of the fuel plan (docs/fuel-plan/plan.md §2 and §5).
+// Single home for every number of the fuel plan.
 import type { Bucket, GiHistory, Product, Sport, TrainingType } from "./types";
 
-// --- Products (§2) ---------------------------------------------------------
+// --- Products ---------------------------------------------------------
 
 export const MAX_CARBS_PER_FLASK_G = 60;
 
@@ -25,7 +25,7 @@ export const PRODUCTS: Record<
   },
 };
 
-// --- Intensity and carb target (§5.1, §5.2) ---------------------------------
+// --- Intensity and carb target ---------------------------------
 
 export const LONG_RACE_MIN = 360;
 
@@ -44,7 +44,7 @@ export const BASE_TABLE: ReadonlyArray<{
   { maxMinExclusive: Infinity, low: 50, moderate: 70, high: 70 },
 ];
 
-// [euristica]
+// [heuristic]
 export const SPORT_FACTOR: Record<Sport, number> = {
   road_running: 0.85,
   track: 0.85,
@@ -58,7 +58,7 @@ export const SPORT_FACTOR: Record<Sport, number> = {
 export const LIGHT_WEIGHT_KG = 60;
 export const LIGHT_WEIGHT_FACTOR = 0.9;
 
-// [euristica]
+// [heuristic]
 export const GI_FACTOR: Record<GiHistory, number> = {
   none: 1,
   mild: 1,
@@ -86,7 +86,7 @@ export const FLOOR_G_H = 30;
  */
 export const CARB_USE_G_H: Record<Bucket, number> = { low: 50, moderate: 80, high: 100 };
 
-// --- Segments and schedule (§5.3, §5.5) -------------------------------------
+// --- Segments and schedule -------------------------------------
 
 export const TRIATHLON_RUN_TARGET_FACTOR = 0.85;
 export const PRE_START_CARBS_G = 20;
@@ -97,9 +97,9 @@ export const SWIMMING_CADENCES_MIN: readonly number[] = [30];
 export const MAX_INTAKES_PER_FLASK = 6;
 export const MANY_FLASKS_ABOVE = 6;
 
-// --- Fluids and sodium (§5.6, §5.7) -----------------------------------------
+// --- Fluids and sodium -----------------------------------------
 
-// [euristica]
+// [heuristic]
 export const SWEAT_BASE_L_H: Record<Bucket, number> = {
   low: 0.5,
   moderate: 0.8,
@@ -118,7 +118,7 @@ export const SWEAT_MAX_L_H = 2.0;
 export const DEFICIT_L_PER_KG = 0.015;
 export const EAH_MIN_DURATION_MIN = 240;
 export const EAH_LIGHT_WEIGHT_KG = 60;
-// [euristica]: no source sets a cap; ~1 L/h is the most athletes can comfortably drink while exercising.
+// [heuristic]: no source sets a cap; ~1 L/h is the most athletes can comfortably drink while exercising.
 export const FLUID_CAP_MEASURED_L_H = 1.0;
 export const FLUID_CAP_EAH_L_H = 0.6;
 export const FLUID_CAP_DEFAULT_L_H = 0.75;
@@ -132,7 +132,7 @@ export const SODIUM_MIN_DURATION_MIN = 120;
 export const SODIUM_LONG_FLOOR_MG_H = 300;
 export const SODIUM_HIGH_MG_H = 1500;
 
-// --- Caffeine (§5.8) ---------------------------------------------------------
+// --- Caffeine ---------------------------------------------------------
 
 export const CAFFEINE_MIN_AGE = 18;
 export const CAFFEINE_MG_PER_KG = { high: 2, normal: 3, low: 4.5 } as const;
@@ -150,7 +150,7 @@ export const CAFFEINE_DOSE_FRACTIONS: Record<number, readonly number[]> = {
 };
 export const CAFFEINE_LATE_ARRIVAL_MIN = 16 * 60;
 
-// --- Before and after the race (§5.9, §5.10) ---------------------------------
+// --- Before and after the race ---------------------------------
 
 export const LOADING_MIN_DURATION_MIN = 90;
 export const LOADING_G_PER_KG = 10;
@@ -161,14 +161,14 @@ export const PRE_FLUID_2H_ML_PER_KG = 4;
 export const RECOVERY_CARBS_G_PER_KG_H: readonly [number, number] = [1.0, 1.2];
 export const RECOVERY_PROTEIN_G_PER_KG = 0.3;
 
-// --- Warnings (§7) -----------------------------------------------------------
+// --- Warnings -----------------------------------------------------------
 
 export const AGE_SENIOR = 65;
 export const MOUTH_RINSE_MIN_DURATION_MIN = 45;
 export const MOUTH_RINSE_MAX_DURATION_MIN = 75;
 export const NO_FUEL_BELOW_MIN = 45;
 
-// --- Input ranges (§3), shared by the validator and the form --------------------
+// --- Input ranges, shared by the validator and the form --------------------
 
 export const INPUT_RANGES = {
   durationMin: { min: 20, max: 2880 },
@@ -189,7 +189,7 @@ export const TRAINING_TYPES: readonly TrainingType[] = ["easy", "long", "tempo",
 
 /**
  * Default RPE for each type of session (the athlete can change it). The engine is the same as for races:
- * the type only sets this starting RPE and, for a brick, the bike + run structure. [euristica]
+ * the type only sets this starting RPE and, for a brick, the bike + run structure. [heuristic]
  */
 export const TRAINING_RPE_PRESET: Record<TrainingType, number> = {
   easy: 3,

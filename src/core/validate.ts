@@ -48,7 +48,7 @@ const clamp = (x: number, min: number, max: number): number => Math.min(max, Mat
 /**
  * Validates untrusted input (browser form or API body) and returns a FuelPlanInput.
  * Numbers must be finite JSON numbers; out-of-range values are clamped to the range of
- * the form (§3), empty optional fields take their default, missing required fields and
+ * the form, empty optional fields take their default, missing required fields and
  * values of the wrong type are reported as errors. Unknown keys are dropped.
  */
 export function parseFuelPlanInput(body: unknown): ParseResult {

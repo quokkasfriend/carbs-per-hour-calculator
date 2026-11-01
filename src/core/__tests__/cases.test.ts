@@ -1,5 +1,5 @@
-// Plan §10, cases A–K. Expected values come from docs/fuel-plan/reference.py.
-// Warning sets are complete: every §7 condition, not only the ones the plan table lists per case.
+// Reference cases A–K. Expected values come from an independent reference implementation of the same rules.
+// Warning sets are complete: every warning condition, not only the ones listed per case.
 import { describe, expect, it } from "vitest";
 import { buildFuelPlan } from "../index";
 import { makeInput, planOf, sorted, warningCodes } from "./helpers";
@@ -187,7 +187,7 @@ describe("F — elite cyclist, 240 min, measured sweat", () => {
     expect(plan.hydration.sodiumMgH).toBe(700);
     expect(plan.hydration.sodiumMgPer500ml).toBe(350);
   });
-  it("warnings (§7)", () => {
+  it("warnings", () => {
     expect(warningCodes(plan)).toEqual(
       sorted(["HIGH_CARB_PRACTICE", "MANY_FLASKS", "HIGH_SWEAT_RATE", "NEW_ON_RACE_DAY"]),
     );

@@ -52,7 +52,7 @@ function arrivalMinutes(startTime: string, durationMin: number): number {
   return h * 60 + m + durationMin;
 }
 
-/** §7, in table order. */
+/** Every warning that applies, in table order. */
 export function computeWarnings(args: {
   input: FuelPlanInput;
   giHistory: GiHistory;

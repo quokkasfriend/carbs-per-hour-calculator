@@ -18,7 +18,7 @@ import {
 import { round5 } from "./rounding";
 import type { Bucket, FuelPlanInput, GiHistory } from "./types";
 
-/** With IBD/IBS the stomach history counts as at least "moderate" (§3 step 3). */
+/** With IBD/IBS the stomach history counts as at least "moderate". */
 export function effectiveGiHistory(input: FuelPlanInput): GiHistory {
   if (input.ibdIbs && (input.giHistory === "none" || input.giHistory === "mild")) return "moderate";
   return input.giHistory;
@@ -31,7 +31,7 @@ export interface CarbTarget {
   floored: boolean;
 }
 
-/** §5.2 */
+/** Carb target (g/h): base table by duration and effort, scaled and capped by the athlete's answers. */
 export function computeTarget(input: FuelPlanInput, bucket: Bucket): CarbTarget {
   const { durationMin } = input;
   const row = BASE_TABLE.find((r) => durationMin < r.maxMinExclusive) ?? BASE_TABLE[BASE_TABLE.length - 1];
