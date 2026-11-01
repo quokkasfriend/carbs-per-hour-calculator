@@ -68,7 +68,7 @@ All the numbers are in `src/core/constants.ts`. Some are rules of thumb built on
 
 ### What the calculator takes into account
 
-**About the race or training session**
+#### About the race or training session
 
 | Input | Required | How it is used |
 | --- | --- | --- |
@@ -80,7 +80,7 @@ All the numbers are in `src/core/constants.ts`. Some are rules of thumb built on
 | Altitude above 2,500 m | no | Adds a warning. |
 | Start time | no | Gives clock times and checks for late caffeine. |
 
-**About the athlete**
+#### About the athlete
 
 | Input | Required | How it is used |
 | --- | --- | --- |
@@ -95,7 +95,7 @@ All the numbers are in `src/core/constants.ts`. Some are rules of thumb built on
 | Sweat rate and sweat sodium | no | If known, they replace the estimates. |
 | Salty sweater | no | Raises the default sodium concentration. |
 
-**Health check**
+#### Health check
 
 | Input | Effect |
 | --- | --- |
@@ -125,7 +125,7 @@ npm run build
 
 ## How it is organised
 
-```
+```text
 src/core/       the calculation engine: pure TypeScript, no React, fully tested
 src/ui/         the three-step form and the result page (React + Tailwind)
 src/messages/   all user-facing text (English)
