@@ -8,9 +8,15 @@ export function App() {
   return (
     <div className="flex min-h-screen flex-col items-center">
       <header className="w-full bg-shade print:hidden">
-        <div className="flex items-center px-8 py-4 tablet:px-12 desktop:px-20">
+        <div className="flex items-center justify-between gap-4 px-6 py-4 tablet:px-12 desktop:px-20">
           <a href={TYPETWO_URL} className="shrink-0">
             <img src="./logo-dark.png" alt="typetwo" width={80} height={80} className="h-16 w-auto" />
+          </a>
+          <a
+            href={TYPETWO_URL}
+            className="rounded-2xl bg-accent px-4 py-2 text-center text-sm font-bold leading-snug text-accent-foreground transition-transform hover:scale-105 tablet:rounded-full tablet:px-7 tablet:py-3 tablet:text-base"
+          >
+            {t("headerCta")}
           </a>
         </div>
       </header>
