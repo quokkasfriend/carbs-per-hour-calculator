@@ -12,6 +12,43 @@ It runs entirely in the browser. Nothing is sent anywhere or stored.
 
 > **Not medical advice.** This is general guidance based on published sports-nutrition research. It does not replace a doctor or a registered sports dietitian. People with diabetes, kidney or heart disease, high blood pressure, gastrointestinal conditions, or who are pregnant or on regular medication should get a plan from a professional. The calculator blocks the plan for some of these cases.
 
+## What you get
+
+Three short steps (the race or session, the athlete, a health check) and the plan appears on the same page. These screenshots show a 3 h 30 min road race at moderate effort, with caffeine and a 07:00 start.
+
+<table>
+  <tr>
+    <td width="50%"><img src="docs/images/01-race-step.png" alt="Step 1: the race or training session" /></td>
+    <td width="50%"><img src="docs/images/02-athlete-step.png" alt="Step 2: the athlete" /></td>
+  </tr>
+  <tr>
+    <td align="center">Step 1: the race or session</td>
+    <td align="center">Step 2: the athlete</td>
+  </tr>
+</table>
+
+<img src="docs/images/03-result-overview.png" alt="The result: key numbers, intake schedule and intake-versus-use charts" width="700" />
+
+<img src="docs/images/04-result-details.png" alt="The result: carb mix and flasks, fluids and sodium, caffeine, before and after the race" width="700" />
+
+### The parts of the plan
+
+| Part | What it tells you |
+| --- | --- |
+| **Key numbers** | Four tiles at the top: carbs per hour, carbs in total, fluids per hour and sodium per hour. |
+| **The short version** | The recommended carb mix (2:1 maltodextrin to fructose, the ratio used in the research for high carb intakes) and the intensity bucket that drove the plan. |
+| **When to take it** | The rhythm (for example "every 15 min take 15 g of carbs") and the full schedule: the elapsed time, the clock time if you gave a start time, the grams of carbs and the water with each intake. Triathlon plans are split into swim, bike and run. Carbs to take before the start are listed too. |
+| **Intake versus use** | Three charts of what you take in against an estimate of what you burn or lose: carbs, fluids and sodium. |
+| **Product example** | How the plan translates into typetwo flasks and grams of powder. This is the only place that names a product, so it is easy to remove or replace. |
+| **Fluids and sodium** | Sweat rate used (yours, or an estimate), fluids and sodium per hour, and the sodium per 500 mL. It never asks you to drink more than you sweat. |
+| **Caffeine** | The total dose and when to take each part, only if you asked for it and it is safe for you. |
+| **Before the race** | Carb loading or the 24 h fuel-up, the pre-race meal for 1 to 4 hours before the start, and the fluids to drink beforehand. Races only, a training session gets the meal and the fluids. |
+| **After the race** | Carbs per hour and protein for recovery, and the fluids to drink for every kg lost. |
+| **Things to know** | The warnings that apply to your answers, grouped by severity (see below). |
+| **Important** | The medical disclaimer, always shown. |
+
+If the health check shows a condition that needs a professional, the plan is replaced by a block message and none of the numbers above are shown.
+
 ## How it works
 
 The calculator is a deterministic rule engine, not a model: the same answers always give the same plan. It runs in four steps.
