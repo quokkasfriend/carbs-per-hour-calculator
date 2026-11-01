@@ -1,0 +1,481 @@
+{
+  "FuelPlan": {
+    "hero": {
+      "title": "Your fuel plan, in two minutes",
+      "body": "Tell us about your race or training session and about yourself. This endurance nutrition calculator turns it into a plan with <strong>carbs per hour</strong> and when to take each portion, plus fluids, sodium and caffeine. It runs in your browser: nothing is saved."
+    },
+    "tool": {
+      "heading": "Build your plan"
+    },
+    "format": {
+      "hour": "h",
+      "minute": "min"
+    },
+    "steps": {
+      "race": "Your race",
+      "athlete": "About you",
+      "health": "Health check",
+      "progress": "Step {current} of {total}",
+      "session": "Your session",
+      "plan": "Your plan"
+    },
+    "nav": {
+      "next": "Next",
+      "back": "Back",
+      "generate": "Show my plan",
+      "edit": "Edit my answers",
+      "restart": "Start over"
+    },
+    "errors": {
+      "summary": "Please check the highlighted fields.",
+      "required": "This field is required.",
+      "range": "Enter a value between {min} and {max}.",
+      "invalid": "Check this value.",
+      "durationRange": "Enter a time between {min} and {max}."
+    },
+    "race": {
+      "sport": {
+        "label": "Sport",
+        "placeholder": "Choose your sport",
+        "options": {
+          "road_running": "Road running",
+          "track": "Track",
+          "trail_ultra": "Trail / ultra",
+          "ocr": "Obstacle Course (e.g. Spartan Race)",
+          "triathlon": "Triathlon",
+          "cycling": "Cycling",
+          "swimming": "Swimming"
+        }
+      },
+      "duration": {
+        "legend": "Expected duration",
+        "hours": "Hours",
+        "minutes": "Minutes",
+        "hint": "Between 20 minutes and 48 hours."
+      },
+      "splits": {
+        "legend": "Expected time per leg",
+        "swim": "Swim",
+        "bike": "Bike",
+        "run": "Run",
+        "hours": "{leg}: hours",
+        "minutes": "{leg}: minutes",
+        "total": "Total: {time}",
+        "hint": "Each leg between 5 minutes and 20 hours."
+      },
+      "rpe": {
+        "label": "Average effort (RPE)",
+        "value": "{rpe} out of 10",
+        "low": "Easy",
+        "high": "All out",
+        "hint": "The effort you expect to hold for the whole race."
+      },
+      "startTime": {
+        "label": "Start time (optional)",
+        "hint": "Gives you clock times and a caffeine check."
+      },
+      "altitudeOver2500": {
+        "label": "The race is above 2,500 m"
+      },
+      "context": {
+        "legend": "What is the plan for?",
+        "options": {
+          "race": "A race",
+          "training": "A training session"
+        }
+      },
+      "trainingType": {
+        "legend": "Type of session",
+        "options": {
+          "easy": "Easy / slow endurance",
+          "long": "Long session",
+          "tempo": "Tempo / threshold",
+          "intervals": "Intervals / high intensity",
+          "brick": "Brick (bike + run)"
+        },
+        "help": {
+          "easy": "Steady, conversational effort.",
+          "long": "A long endurance session.",
+          "tempo": "A sustained effort close to your threshold.",
+          "intervals": "Repeats or HIIT at high intensity.",
+          "brick": "A bike session followed straight by a run (triathlon training)."
+        }
+      },
+      "brick": {
+        "legend": "Time per part",
+        "hint": "Bike first, then run. Each part between 5 minutes and 20 hours."
+      },
+      "temperature": {
+        "legend": "Temperature",
+        "options": {
+          "low": "Low · below 15 °C",
+          "medium": "Medium · 15–24 °C",
+          "high": "High · 25 °C or above"
+        }
+      },
+      "humidity": {
+        "legend": "Humidity",
+        "options": {
+          "low": "Low · below 40%",
+          "medium": "Medium · 40–70%",
+          "high": "High · above 70%"
+        }
+      }
+    },
+    "rpeExplainer": {
+      "toggle": "What is RPE?",
+      "intro": "<strong>RPE (Rating of Perceived Exertion)</strong> is a 1–10 scale of how hard an effort feels overall: your breathing, your legs, how easily you can talk. Pick the <strong>average effort you expect to hold for the whole race</strong>, not the hardest moment.",
+      "columns": {
+        "rpe": "RPE",
+        "feels": "Feels like",
+        "talk": "Talk test",
+        "zone": "Typical zone*"
+      },
+      "rows": [
+        {
+          "rpe": "1–2",
+          "feels": "Very easy",
+          "talk": "Full conversation",
+          "zone": "Zone 1 (recovery)"
+        },
+        {
+          "rpe": "3–4",
+          "feels": "Easy, steady",
+          "talk": "Full sentences",
+          "zone": "Zone 2 (below your first threshold)"
+        },
+        {
+          "rpe": "5–6",
+          "feels": "Moderate, \"comfortably hard\"",
+          "talk": "Short sentences",
+          "zone": "Zone 3 (between first and second threshold)"
+        },
+        {
+          "rpe": "7–8",
+          "feels": "Hard",
+          "talk": "A few words at a time",
+          "zone": "Zone 4 (around threshold, roughly 1-hour race effort)"
+        },
+        {
+          "rpe": "9–10",
+          "feels": "Very hard to max",
+          "talk": "Can't talk",
+          "zone": "Zone 5 (only sustainable for minutes)"
+        }
+      ],
+      "footnote": "*Zones refer to the common 5-zone heart-rate model. Zone systems vary (some use 3, 6 or 7 zones), so treat the match as approximate. If you train with heart rate or power, use the zone you expect to average and pick the matching RPE.",
+      "typical": "Typical race averages: Ironman 4–5 · 100 km trail 3–5 · marathon 6–7 · half marathon 7–8 · 10 km / Spartan Sprint 8."
+    },
+    "athlete": {
+      "advanced": {
+        "summary": "More precise data",
+        "hint": "Optional: if you know them, the plan fits you better."
+      },
+      "weightKg": {
+        "label": "Body weight (kg)"
+      },
+      "sex": {
+        "label": "Sex",
+        "options": {
+          "female": "Female",
+          "male": "Male",
+          "prefer_not_to_say": "Prefer not to say"
+        }
+      },
+      "age": {
+        "label": "Age"
+      },
+      "level": {
+        "label": "Level",
+        "options": {
+          "beginner": "Beginner",
+          "recreational": "Recreational",
+          "trained": "Trained",
+          "elite": "Elite"
+        },
+        "help": {
+          "beginner": "New to endurance events or fuelling during exercise",
+          "recreational": "Train regularly, race a few times a year",
+          "trained": "Structured training most days, experienced racer",
+          "elite": "Competitive / sponsored athlete"
+        }
+      },
+      "toleratedGPerH": {
+        "label": "Carbs you tolerate (g/h, optional)",
+        "help": "Highest amount of carbs per hour you've comfortably taken in a long training session."
+      },
+      "gutTrained": {
+        "label": "My gut is trained",
+        "help": "I've regularly practised this intake in long sessions over recent weeks without significant stomach issues."
+      },
+      "giHistory": {
+        "label": "Stomach issues during exercise",
+        "help": "E.g. nausea, bloating, cramps, side stitch, reflux, vomiting or urgent toilet stops while running, riding or racing.",
+        "options": {
+          "none": "None",
+          "mild": "Mild",
+          "moderate": "Moderate",
+          "severe": "Severe"
+        }
+      },
+      "sweatRateLPerH": {
+        "label": "Sweat rate (L/h, optional)",
+        "help": "Know your sweat rate? (Weigh yourself before and after a 1-hour session without drinking: each kg lost ≈ 1 L/h.) Typical: about 1.0–1.5 L/h for men and 0.7–1.0 L/h for women, in mild weather at a moderate effort."
+      },
+      "sweatSodiumMgPerL": {
+        "label": "Sweat sodium (mg/L, optional)",
+        "help": "Only if you've had a sweat test. Typical: about 950 mg/L, similar for men and women (individual values range from roughly 500 to 1,500)."
+      },
+      "saltySweater": {
+        "label": "Salty sweater?",
+        "help": "Do you see white salt marks on your skin or clothes after training?",
+        "options": {
+          "yes": "Yes",
+          "no": "No",
+          "dont_know": "I don't know"
+        }
+      },
+      "caffeine": {
+        "label": "Include caffeine in my plan"
+      },
+      "caffeineSensitivity": {
+        "label": "Caffeine sensitivity",
+        "options": {
+          "low": "Low: I handle it well",
+          "normal": "Normal",
+          "high": "High: it hits me hard"
+        }
+      }
+    },
+    "health": {
+      "intro": "Tick anything that applies to you. Your answers stay in your browser and are only used to make your plan safer. They leave it only if you ask us to email you the plan.",
+      "legend": "Do any of these apply to you?",
+      "items": {
+        "diabetesOnMedication": "Diabetes treated with insulin or glucose-lowering medication",
+        "kidneyDisease": "Kidney disease",
+        "heartCondition": "Heart condition",
+        "pregnant": "Pregnant or breastfeeding",
+        "highBloodPressure": "High blood pressure",
+        "ibdIbs": "IBD or IBS",
+        "fructoseIntolerance": "Fructose intolerance or malabsorption",
+        "nsaids": "I plan to take ibuprofen or similar painkillers (NSAIDs) on race day",
+        "redsSigns": "Missed periods, stress fractures or unintended weight loss in the last year"
+      }
+    },
+    "result": {
+      "visual": {
+        "tiles": {
+          "carbs": "Carbs per hour",
+          "total": "Carbs in total",
+          "fluids": "Fluids per hour",
+          "sodium": "Sodium per hour"
+        },
+        "mlValue": "{ml} mL",
+        "mgValue": "{mg} mg",
+        "gValue": "{g} g",
+        "perHourRange": "{low}–{high} g/h",
+        "balance": {
+          "heading": "What you take in vs. what you use",
+          "note": "Burned and lost amounts are estimates based on intensity, weather and your sweat rate.",
+          "carbs": "Carbs",
+          "fluids": "Fluids",
+          "sodium": "Sodium",
+          "intake": "In",
+          "burned": "Burned",
+          "lost": "Lost",
+          "alt": "{metric}: {intake} in and about {used} {verb} by the end."
+        },
+        "scheduleSummary": "Full schedule ({count} intakes)"
+      },
+      "heading": "Your race fuel plan",
+      "blockedHeading": "We can't build this plan",
+      "summary": {
+        "heading": "The short version",
+        "target": "Carbs per hour",
+        "targetValue": "{target} g/h",
+        "blend": "Recommended carb mix",
+        "intensity": "Intensity",
+        "intensityValue": {
+          "low": "Low",
+          "moderate": "Moderate",
+          "high": "High"
+        },
+        "race": "Race",
+        "raceValue": "{sport}, {time}",
+        "totalCarbs": "Carbs in the whole race",
+        "totalCarbsValue": "{g} g",
+        "sessionValue": "{type} · {sport}, {time}",
+        "brickValue": "{type}, {time}"
+      },
+      "products": {
+        "typetwo": "typetwo",
+        "ratio": {
+          "typetwo": "2:1 maltodextrin : fructose"
+        }
+      },
+      "segments": {
+        "main": "Race",
+        "swim": "Swim",
+        "bike": "Bike",
+        "run": "Run"
+      },
+      "timeline": {
+        "heading": "When to take it",
+        "intro": "Times count from the start of the race.",
+        "time": "Time",
+        "clock": "Clock time",
+        "nextDay": "{time} (next day)",
+        "preStart": "Before the start, {minutes} minutes: {carbs} g of carbs.",
+        "segmentRate": "Every {cadence} min take {portion} g of carbs: {rate} g/h.",
+        "segmentRateTarget": "Every {cadence} min take {portion} g of carbs: {rate} g/h (target {target} g/h).",
+        "take": "Take about {carbs} g of carbs",
+        "water": "with about {ml} mL of water",
+        "caffeine": "+ caffeine {mg} mg",
+        "elapsed": "{time} into the race",
+        "empty": "No intakes are planned for this race."
+      },
+      "typetwo": {
+        "heading": "For example, with typetwo you can manage your fuelling like this",
+        "intro": "typetwo is an energy gel you mix yourself in a reusable flask. Each flask holds one product only: add water until the gel has the consistency you like.",
+        "preStart": "For the {carbs} g before the start: {powder} g of typetwo powder.",
+        "noFuel": "No carbs are planned for this part.",
+        "fullFlasks": "{count, plural, one {# flask} other {# flasks}} with {carbs} g of carbs ({powder} g of powder)",
+        "lastFlask": "1 flask with {carbs} g of carbs ({powder} g of powder)",
+        "portions": "Each flask holds {count, plural, one {# portion} other {# portions}} of {portion} g.",
+        "benefitsHeading": "Why it can work better than other ways to fuel",
+        "benefits": {
+          "dose": "Your own dose: choose the grams of carbs per flask in 5 g steps and carry exactly what the plan needs, instead of fixed-size gels (18–45 g), bars or candies (15–20 g).",
+          "taste": "Your taste and texture: mix it with water, juice or your usual sports drink, from a light drink to a thick gel. Gels are dense, drink mixes liquid, bars and candies solid.",
+          "absorption": "Two sugars, maltodextrin and fructose, use different absorption routes in the gut, which lets the gut absorb more than the roughly 60 g/h a single sugar allows.",
+          "reusable": "A reusable flask: no wrappers to tear open with cold or muddy hands, and no packaging to throw away.",
+          "price": "Lower cost: from about €1 for 30 g of carbs, against roughly €2–4 for a typical gel."
+        }
+      },
+      "hydration": {
+        "heading": "Fluids and sodium",
+        "sweatRateMeasured": "Sweat rate used: {rate} L/h (measured by you).",
+        "sweatRateEstimated": "Sweat rate used: {rate} L/h (our estimate).",
+        "fluids": "Fluids: {ml} mL per hour",
+        "fluidsNote": "This plan never asks you to drink more than you sweat. Spread the fluids evenly instead of drinking big amounts at once.",
+        "noFluids": "No planned drinking needed for this duration. Start the race well hydrated (see Before the race).",
+        "sodium": "Sodium: {mg} mg per hour ({per500} mg per 500 mL of fluid)",
+        "sodiumNote": "typetwo does not provide a useful amount of sodium. Get it from an electrolyte product or from salt: the amounts here are in mg of sodium.",
+        "noSodium": "No sodium plan is needed for this duration."
+      },
+      "caffeine": {
+        "heading": "Caffeine",
+        "total": "{mg} mg in total ({mgPerKg} mg per kg of body weight)",
+        "pre": "{mg} mg, 60 minutes before the start",
+        "during": "{mg} mg, {time} into the race",
+        "note": "Caffeine comes from a separate product: typetwo contains none.",
+        "off": "Caffeine is not part of this plan."
+      },
+      "preRace": {
+        "heading": "Before the race",
+        "loading": "Carb loading: about {g} g of carbs a day for 36–48 hours before the race (10 g per kg, up to 12 g per kg).",
+        "fuelUp": "In the 24 hours before the race: about {g} g of carbs (7 g per kg).",
+        "mealIntro": "Pre-race meal: 1 g of carbs per kg for every hour before the start, from 1 to 4 hours. Keep it low in fibre and fat.",
+        "mealRow": "{hours, plural, one {# hour} other {# hours}} before: {g} g of carbs",
+        "fluids": "At least 4 hours before the start, drink {ml4} mL. If you haven't peed or your urine is dark, drink another {ml2} mL 2 hours before."
+      },
+      "recovery": {
+        "heading": "After the race",
+        "carbs": "If your next session is within 8 hours: {low}–{high} g of carbs per hour for the first 4 hours.",
+        "fluids": "Drink 1.25–1.5 L of fluids with sodium for every kg you lost (weigh yourself before and after).",
+        "protein": "Have about {g} g of protein (0.3 g per kg)."
+      },
+      "warnings": {
+        "heading": "Things to know",
+        "severity": {
+          "block": "Stop",
+          "warning": "Warning",
+          "info": "Note"
+        }
+      }
+    },
+    "warnings": {
+      "MEDICAL_BLOCK": "We can't generate a safe plan for your situation. Fuelling with these conditions needs a plan built with your doctor or a sports dietitian.",
+      "PREGNANCY": "Caffeine has been removed. Talk to your doctor or midwife before racing or changing how you fuel.",
+      "HIGH_BP": "Caffeine has been removed. Check your sodium intake with your doctor.",
+      "REDS": "These can be signs of low energy availability (RED-S). Please speak with a doctor or sports dietitian, and don't cut back on fuel.",
+      "EAH_RISK": "Your profile has a higher risk of exercise-associated hyponatremia. Don't drink more than this plan and never gain weight during the race.",
+      "EAH_SYMPTOMS": "Warning signs of low blood sodium: nausea, headache, confusion, puffy hands. Stop drinking plain water and get medical help.",
+      "NSAIDS": "Painkillers like ibuprofen raise the risk of hyponatremia and gut damage during long races.",
+      "HEAT": "Heat increases sweat and sodium losses and can upset your stomach. Practise this plan in similar conditions.",
+      "ALTITUDE": "At altitude appetite drops and you lose more water through breathing. Stick to the schedule even if you don't feel hungry.",
+      "ESTIMATED_SWEAT": "Your fluid numbers are estimated. Weigh yourself before and after a 1-hour session to measure your sweat rate.",
+      "HIGH_SWEAT_RATE": "Your measured sweat rate is higher than the fluid this plan covers: most athletes can't comfortably drink more than about 1 L/h while exercising. Don't try to replace everything you lose, and talk to a sports dietitian about your strategy.",
+      "AGE_65": "With age the urge to drink gets weaker. Follow the fluid schedule rather than waiting until you feel you need to drink.",
+      "UNDER_18": "Caffeine is turned off for athletes under 18.",
+      "GI_HISTORY": "Your carb target is reduced because of your stomach history. Build up gradually in training.",
+      "GI_FLOOR": "This race needs at least 30 g of carbs per hour, which is above what you've tolerated so far. Practise in training before race day.",
+      "HIGH_CARB_PRACTICE": "This high-carb plan is based on what you told us you tolerate. Rehearse it in at least two long sessions before race day.",
+      "FRUCTOSE": "This plan includes fructose (one third of the carbs in a 2:1 mix). Test it carefully in training, ideally with a dietitian's advice.",
+      "CAFFEINE_LATE": "You finish late in the day: caffeine can disturb your sleep. Consider a lower dose or skipping the last one.",
+      "SODIUM_HIGH": "This is a very high sodium intake. Check it with a sports dietitian.",
+      "MANY_FLASKS": "That's a lot of flasks to carry. Bring pre-weighed powder and refill at aid stations or your bike bottle cage.",
+      "MOUTH_RINSE": "For short hard efforts, rinsing your mouth with a carb drink can help even if you don't swallow much.",
+      "NO_FUEL": "For races under 45 minutes you don't need carbs during the race. Focus on your pre-race meal.",
+      "NEW_ON_RACE_DAY": "Nothing new on race day: test this exact plan in training first.",
+      "PRACTICE_FUELLING": "Training is the place to rehearse your fuelling: note what you take, how you feel and what sits well, and use it to refine your plan."
+    },
+    "disclaimer": {
+      "heading": "Important",
+      "p1": "This plan is general guidance based on published sports-nutrition research. It is not medical advice and does not replace a doctor or registered sports dietitian. Numbers are estimates: individual needs vary, so test the plan in training and adjust.",
+      "p2": "<strong>Do not use this plan without medical advice if you are pregnant or breastfeeding</strong>, have diabetes, kidney or heart disease, high blood pressure, a gastrointestinal condition, or take regular medication.",
+      "p3": "<strong>Caffeine:</strong> stay within the dose shown, avoid it if you are sensitive, under 18, pregnant or breastfeeding, and remember that caffeine taken in the afternoon or evening, for example when your race finishes late, can disturb your sleep.",
+      "p4": "Allergens: typetwo contains maltodextrin, fructose, citric acid, xanthan gum and salt. Check the label of any other product you use."
+    },
+    "training": {
+      "race": {
+        "duration": {
+          "legend": "Session length"
+        },
+        "rpe": {
+          "hint": "The effort you expect to hold for the whole session."
+        },
+        "altitudeOver2500": {
+          "label": "The session is above 2,500 m"
+        }
+      },
+      "health": {
+        "items": {
+          "nsaids": "I plan to take ibuprofen or similar painkillers (NSAIDs) before or during this session"
+        }
+      },
+      "rpeExplainer": {
+        "intro": "<strong>RPE (Rating of Perceived Exertion)</strong> is a 1–10 scale of how hard an effort feels overall: your breathing, your legs, how easily you can talk. Pick the <strong>average effort you expect to hold for the whole session</strong>, not the hardest moment."
+      },
+      "result": {
+        "heading": "Your training fuel plan",
+        "summary": {
+          "race": "Session",
+          "totalCarbs": "Carbs in the whole session"
+        },
+        "timeline": {
+          "intro": "Times count from the start of the session."
+        },
+        "caffeine": {
+          "during": "{mg} mg, {time} into the session"
+        },
+        "preRace": {
+          "heading": "Before the session",
+          "mealIntro": "Meal before the session: 1 g of carbs per kg for every hour before the start, from 1 to 4 hours. Keep it low in fibre and fat."
+        },
+        "recovery": {
+          "heading": "After the session"
+        },
+        "hydration": {
+          "noFluids": "No planned drinking needed for this duration. Start the session well hydrated (see Before the session)."
+        }
+      },
+      "warnings": {
+        "EAH_RISK": "Your profile has a higher risk of exercise-associated hyponatremia. Don't drink more than this plan and never gain weight during the session.",
+        "NSAIDS": "Painkillers like ibuprofen raise the risk of hyponatremia and gut damage during long sessions.",
+        "GI_FLOOR": "This session needs at least 30 g of carbs per hour, which is above what you've tolerated so far. Build up gradually over several sessions.",
+        "HIGH_CARB_PRACTICE": "This high-carb plan is based on what you told us you tolerate. Build up to it gradually over several sessions.",
+        "NO_FUEL": "For sessions under 45 minutes you don't need carbs during the session. Focus on what you eat before."
+      }
+    }
+  }
+}

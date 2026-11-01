@@ -1,0 +1,33 @@
+{
+  "name": "carbs-per-hour-calculator",
+  "version": "0.1.0",
+  "description": "Open-source endurance fuelling calculator: carbs per hour, fluids, sodium and caffeine for a race or training session.",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@fontsource/passion-one": "^5.3.0",
+    "@fontsource/raleway": "^5.3.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "use-intl": "^4.14.9"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5",
+    "vitest": "^5.0.5"
+  }
+}
